@@ -1,19 +1,18 @@
-def divide_list(input_list):#функця divide_list розділяє вхідний список на два підсписка
-    #divide_list приймає аргумент - input_list - список, який потрібно розділити
-    if len(input_list) == 0: #перевірка вхідний список є ПОРОЖНІЙ
-        return [[], []]  #якщо вхідний список порожній, повертаємо список, що містить два порожніх списки
-    elif len(input_list) % 2 == 0: #якщо кількість елементів у вхідному списку ПАРНА,
-        # розділяємо список рівномірно
-        midpoint = len(input_list) // 2 #знаходимо середину списку
-        return [input_list[:midpoint], input_list[midpoint:]] #Розділяємо вхідний список на два підсписка
-    else: #інші випадки (коли кількість елементів у списку НЕПАРНА)
-        midpoint = len(input_list) // 2 #знаходимо середину списку
-        return [input_list[:midpoint + 1], input_list[midpoint + 1:]]
-        #ділимо вхідний список так, щоб перший підсписок містив один елемент більше, ніж другий підсписок
+def divide_list(input_list):
+    lst2 = []
+    if len(input_list) % 2 == 0:
+        index = len(input_list) // 2
+        lst2.append(input_list[:index])
+        lst2.append(input_list[index:])
+    else:
+        index = len(input_list) // 2 + 1
+        lst2.append(input_list[:index])
+        lst2.append(input_list[index:])
+    return lst2
 
 # Приклади:
-print(divide_list([1, 2, 3, 4, 5, 6])) #Виводиться [[1, 2, 3], [4, 5, 6]]
-print(divide_list([1, 2, 3])) #Виводиться [[1, 2], [3]]
-print(divide_list([1]))  #Виводиться[[1], []]
-print(divide_list([]))  #Виводиться [[], []]
+print(divide_list([1, 2, 3, 4, 5, 6]))  # Виводиться [[1, 2, 3], [4, 5, 6]]
+print(divide_list([1, 2, 3]))           # Виводиться [[1, 2], [3]]
+print(divide_list([1]))                  # Виводиться [[1], []]
+print(divide_list([]))                   # Виводиться [[], []]
 
