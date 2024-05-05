@@ -4,6 +4,6 @@ def generate_hashtag(s):
     hashtag = ''.join(char for char in hashtag if char not in string.punctuation + ' ')
     hashtag = hashtag[:140]
     if hashtag:
-        hashtag = '#' + hashtag
+       hashtag = '#' + hashtag
     return hashtag
 print(generate_hashtag(input("Введіть рядок: ")))
