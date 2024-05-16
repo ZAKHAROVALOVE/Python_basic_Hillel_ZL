@@ -1,4 +1,4 @@
-def find_unique_value(some_list):
+def find_unique_value(some_list: list):
     """
     This function takes a list as input and returns the unique value that appears only once in the list.
     """
