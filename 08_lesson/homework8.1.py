@@ -1,12 +1,12 @@
-def add_one(some_list: list):
+def add_one(some_list: list) -> list:
     """
     Increment the number represented by a list of digits by one.
 
     Args:
-        some_list (list of int): A list of integers representing digits of a number.
+        some_list: A list of integers representing digits of a number.
 
     Returns:
-        list of int: A list of integers representing digits of the incremented number.
+        A list of integers representing digits of the incremented number.
     """
     num = int(''.join(map(str, some_list))) + 1
     result_list = [int(digit) for digit in str(num)]
