@@ -1,14 +1,7 @@
-def find_unique_value(some_list: list) -> float:
+def find_unique_value(some_list):
     """
-    Find the unique value in a list.
-
-    Args:
-        some_list (list): A list of elements.
-
-    Returns:
-        float: The unique value found in the list.
+    This function takes a list as input and returns the unique value that appears only once in the list.
     """
-
     count_dict = {}
     for num in some_list:
         if num in count_dict:
