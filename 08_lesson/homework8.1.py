@@ -1,4 +1,4 @@
-def add_one(some_list):
+def add_one(some_list: list):
     """
     Increment the number represented by a list of digits by one.
 
