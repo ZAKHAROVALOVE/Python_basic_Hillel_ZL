@@ -1,9 +1,9 @@
-def is_palindrome(text):
+def is_palindrome(text: str) -> bool:
     """
     Check if a given text is a palindrome.
 
     Args:
-        text (str): The text to be checked.
+        text: The text to be checked.
 
     Returns:
         bool: True if the text is a palindrome, False otherwise.
