@@ -1,14 +1,13 @@
-def is_palindrome(text: str) -> bool:
+def is_palindrome(text):
     """
-    Check if a string is a palindrome.
+    Check if a given text is a palindrome.
 
     Args:
-        text (str): The string to check.
+        text (str): The text to be checked.
 
     Returns:
-        bool: True if the string is a palindrome, False otherwise.
+        bool: True if the text is a palindrome, False otherwise.
     """
-
     cleaned_text = ''.join(char.lower() for char in text if char.isalnum())
     reversed_text = cleaned_text[::-1]
     return cleaned_text == reversed_text
