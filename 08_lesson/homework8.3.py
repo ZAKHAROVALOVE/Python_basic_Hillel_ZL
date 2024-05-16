@@ -17,3 +17,4 @@ if __name__ == "__main__":
     assert find_unique_value([2, 3, 3, 3, 5, 5]) == 2, 'Test2'
     assert find_unique_value([5, 5, 5, 2, 2, 0.5]) == 0.5, 'Test3'
     print("ОК")
+
